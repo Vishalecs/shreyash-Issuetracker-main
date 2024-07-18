@@ -1,5 +1,5 @@
 const express = require('express');
-const port = process.env.PORT || 8000;
+const port =  8000;
 const app = express();
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts'); //for accesing all ejs files in single layout
@@ -12,6 +12,7 @@ app.use(expressLayouts);
 app.use(express.urlencoded());
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
+
 
 app.use('/', require('./routes')); //when url req. comes it will redirect to routes
 
